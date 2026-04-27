@@ -2,27 +2,29 @@
 
 Simple PHP web application for browsing films, rating them, writing reviews, and managing content through an admin panel.
 
-Built with PHP, MySQL, Bootstrap 4, JavaScript, and AJAX (Fetch API), with additional UI libraries such as noUiSlider and Font Awesome.
+Built with PHP, MySQL, Bootstrap, JavaScript, and AJAX (Fetch API), with additional UI libraries such as noUiSlider and Font Awesome.
 
 ---
 
-## Preview
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
 
-### Browse films
+  <a href="assets/home-page.png">
+    <img src="assets/home-page.png" style="width:400px; height:250px; object-fit:cover;">
+  </a>
 
-<img src="assets/home-page.png" alt="Browse films" width="900">
+  <a href="assets/film-details.png">
+    <img src="assets/film-details.png" style="width:400px; height:250px; object-fit:cover;">
+  </a>
 
-### Film reviews
+  <a href="assets/user-profile.png">
+    <img src="assets/user-profile.png" style="width:400px; height:250px; object-fit:cover;">
+  </a>
 
-<img src="assets/film-details.png" alt="Film reviews" width="900">
+  <a href="assets/admin-dashboard.png">
+    <img src="assets/admin-dashboard.png" style="width:400px; height:250px; object-fit:cover;">
+  </a>
 
-### User profile
-
-<img src="assets/user-profile.png" alt="User profile" width="900">
-
-### Admin panel
-
-<img src="assets/admin-dashboard.png" alt="Admin panel" width="900">
+</div>
 
 ---
 
