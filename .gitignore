@@ -1,0 +1,4 @@
+config.php
+.env
+uploads/*
+!uploads/NULL.jpg

@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#content {
+    min-height: calc(100vh - 70px); 
+    margin-bottom: -70px;
+    padding-bottom: 70px; 
+    box-sizing: border-box;
+}
+
+footer {
+    height: 70px;
+    background: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-image {
+    max-height: 50px;
+}
+
+.app-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.user-nav .login-button {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+}
+
+.film.card {
+    height: auto; 
+}
+
+.card-img-top-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10;
+	padding-bottom: 0;
+}
+
+.card-body .mt-auto {
+    margin-top: 10px;
+}
+
+.card-title {
+    color: #007BFF;
+}
+
+.card-text {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+.card-footer p {
+    font-size: 1em;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+a {
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    font-size: 0.9esm;
+    font-weight: 500;
+}
+
+.poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    height: 450px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+.poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050; 
+    width: auto;
+    max-width: 300px;
+    pointer-events: none; 
+}
+
+.alert {
+    pointer-events: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+	transition: all 0.3s ease-in-out;
+}
+
+.review-votes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.review-votes .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete-review-btn {
+    color: #fff;
+    background-color: #6c757d;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete-review-btn:hover {
+    background-color: #5a6268;
+}
+
+.review {
+    position: relative;
+    font-size: 14px;
+	
+}
+
+#reviewsModal .modal-content {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    padding: 20px;
+}
+
+#reviewsModal p {
+    margin-bottom: 8px;
+}
+
+#reviewsModal h2 {
+    margin-bottom: 20px;
+}
+
+#reviewsModal .review {
+    margin-bottom: 15px;
+    padding-bottom: 10px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+#reviewsModal .btn {
+    margin-top: 10px;
+}
+
+#flash-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .film {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .film-poster {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .card-footer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-3 {
+        max-width: 25%;
+        flex: 0 0 25%;
+    }
+}
+
+		#slider-container {
+			height: 10px;
+			background: #e1e1e1;
+			border-radius: 5px;
+		}
+
+		#slider-container .noUi-connect {
+			background: #087cfc;
+			border-radius: 5px;
+		}
+
+		#slider-container .noUi-handle {
+			height: 18px;
+			width: 18px;
+			top: -5px;
+			right: -9px;
+			border-radius: 50%;
+			background: #087cfc;
+			border: none;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+			cursor: grab;
+		}
+
+		#slider-container .noUi-handle:active {
+			cursor: grabbing;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+		}
+		
+		.noUi-handle::before,
+		.noUi-handle::after {
+			display: none;
+		}
